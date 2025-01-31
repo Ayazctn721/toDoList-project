@@ -1,28 +1,22 @@
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: background 0.1s ease-in-out;
 }
 
-.pulse {
-  animation: pulse 2s infinite;
+#checkbox-div {
+  background-color: white;
+}
+#btn-plus {
+  background-color: white;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+.list-group-item {
+  border-bottom: 1px solid gray;
+}
+
+.completed {
+  text-decoration: line-through;
 }
