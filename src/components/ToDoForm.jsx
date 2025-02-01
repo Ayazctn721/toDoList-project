@@ -3,47 +3,36 @@ import { FaPlus } from "react-icons/fa6";
 import { useState } from 'react';
 import { isValidTitle } from '../utils.js';
 
-
 function ToDoForm({ addTask, toggleAllTasks, allChecked }) {
 
     const [title, setTitle] = useState('');
-
     const [validTitle, setValidTitle] = useState(false);
 
     const handleInput = (e) => {
         const value = e.target.value;
         setTitle(value);
         setValidTitle(isValidTitle(value));
-
-        // console.log(value)
     }
-
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
 
         const newTask = {
             id: Date.now(),
             title: title,
             completed: false
         }
-        // console.log(newTask);
 
         addTask(newTask);
-
         setTitle('');
-
         setValidTitle(false);
     }
 
     const isValidForm = validTitle;
 
-
     return (
         <form
             className='form mx-auto mt-5 w-75 d-flex flex-column justify-content-center align-content-center'>
-
             <h1 className='text-center mb-4'>ToDo List</h1>
             <div className="input-group  mx-auto " id="input-group">
                 <div className="input-group-text border-0 " id="checkbox-div">
@@ -73,7 +62,6 @@ function ToDoForm({ addTask, toggleAllTasks, allChecked }) {
                     />
                 </button>
             </div>
-
         </form>
     )
 }

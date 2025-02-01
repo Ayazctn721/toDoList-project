@@ -42,10 +42,20 @@ function App() {
       <DateTime />
       <ThemeSwitcher />
       <div className="container">
-        <ToDoForm addTask={addTask} toggleAllTasks={toggleAllTasks} allChecked={allChecked} />
+        <ToDoForm
+          addTask={addTask}
+          toggleAllTasks={toggleAllTasks}
+          allChecked={allChecked} />
       </div>
-      <ToDoList tasks={tasks} removeTask={removeTask} toggleTask={toggleTask} filter={filter} />
-      <Footer taskCount={tasks.length} setFilter={setFilter} clearCompleted={clearCompleted} />
+      <ToDoList
+        tasks={tasks}
+        removeTask={removeTask}
+        toggleTask={toggleTask}
+        filter={filter} />
+      <Footer
+        taskCount={tasks.length}
+        setFilter={setFilter}
+        clearCompleted={clearCompleted} />
     </>
   );
 }

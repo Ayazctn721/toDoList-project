@@ -16,7 +16,12 @@ function ToDoList({ tasks, removeTask, toggleTask, filter }) {
     <div className='container mx-auto mt-1 d-flex justify-content-center flex-column align-items-center'>
       <ul className="list-group-item bg-white w-75 p-2 border-0 mb-0">
         {filteredTasks.map((task) => (
-          <TaskCard key={task.id} task={task} removeTask={removeTask} toggleTask={toggleTask} />
+          <TaskCard
+            key={task.id}
+            task={task}
+            removeTask={removeTask}
+            toggleTask={toggleTask}
+          />
         ))}
       </ul>
     </div>
