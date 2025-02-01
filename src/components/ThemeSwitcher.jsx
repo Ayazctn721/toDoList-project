@@ -6,12 +6,11 @@ function ThemeSwitcher() {
 
     useEffect(() => {
         if (darkMode) {
-            document.body.style.background = "linear-gradient(to bottom,rgb(125, 125, 125) 40%,rgb(79, 78, 78) 40%)";
-            document.body.style.color = "white";
+            document.body.style.background = "linear-gradient(to bottom,rgb(54, 54, 54) 40%,rgb(61, 61, 61) 40%)";
+            document.body.style.color = "darkgreen";
         } else {
             document.body.style.background = "linear-gradient(to bottom, #D4D4D4 40%, #EDEDED 40%)";
             document.body.style.color = "black";
-            document.getElementById("btn-plus").style.backgroundColor = "white";
         }
     }, [darkMode]);
 

@@ -42,9 +42,10 @@ function ToDoForm({ addTask, toggleAllTasks, allChecked }) {
 
     return (
         <form
-            className='form mt-5 d-flex flex-column justify-content-center align-content-center' >
+            className='form mx-auto mt-5 w-75 d-flex flex-column justify-content-center align-content-center'>
+
             <h1 className='text-center mb-4'>ToDo List</h1>
-            <div className="input-group  w-75 mx-auto" id="input-group">
+            <div className="input-group  mx-auto " id="input-group">
                 <div className="input-group-text border-0 " id="checkbox-div">
                     <input
                         className="form-check-input  border-1 rounded-4 fs-3 my-2"
@@ -72,6 +73,7 @@ function ToDoForm({ addTask, toggleAllTasks, allChecked }) {
                     />
                 </button>
             </div>
+
         </form>
     )
 }

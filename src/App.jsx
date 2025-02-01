@@ -3,6 +3,7 @@ import ToDoForm from "./components/ToDoForm.jsx";
 import ToDoList from "./components/ToDoList.jsx";
 import Footer from "./components/Footer.jsx";
 import ThemeSwitcher from './components/ThemeSwitcher.jsx';
+import DateTime from "./components/DateTime.jsx";
 function App() {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState("all");
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <>
+      <DateTime />
       <ThemeSwitcher />
       <div className="container">
         <ToDoForm addTask={addTask} toggleAllTasks={toggleAllTasks} allChecked={allChecked} />

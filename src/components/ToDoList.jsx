@@ -9,7 +9,9 @@ function ToDoList({ tasks, removeTask, toggleTask, filter }) {
   });
 
   return filteredTasks.length < 1 ? (
-    <div className="text-center p-2 " id="no-tasks">No tasks</div>
+    <div className="container mx-auto mt-1 ">
+      <div className="text-center p-2 bg-white w-75 border-bottom  mx-auto text-dark" id="no-tasks">No tasks</div>
+    </div>
   ) : (
     <div className='container mx-auto mt-1 d-flex justify-content-center flex-column align-items-center'>
       <ul className="list-group-item bg-white w-75 p-2 border-0 mb-0">
